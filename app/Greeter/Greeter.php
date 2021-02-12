@@ -6,13 +6,13 @@ use App\Languages as Lang;
 
 class Greeter
 {
-    public function __construct(Lang $lang)
+    public function __construct(Lang\Language $lang)
     {
         $this-> lang = $lang;
     }
 
     public function greet()
     {
-        return $lang->hello();
+        return $this->lang->hello();
     }    
 }
